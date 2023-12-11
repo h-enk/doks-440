@@ -18,6 +18,43 @@ seo:
   noindex: false # false (default) or true
 ---
 
+## Gallery Shortcode
+
+Just a quick example to help you get started.
+
+I've added `layouts/shortcodes/gallery.html` with the following contents:
+
+```html
+<div class="{{ .Get "class" }}">
+  {{- $images := .Page.Resources.ByType "image" -}}
+  {{- $featured := $images.GetMatch "*feature*" -}}
+  {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+  {{- if $featured -}}
+    {{- partial "picture" (dict "page" .Page "src" $featured) }}
+  {{ end -}}
+</div>
+```
+
+Note that you'll need `.Page` in stead of just [the dot](https://www.regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/) to make it work :
+
+```html
+{{- $images := .Page.Resources.ByType "image" -}}
+```
+
+```html
+{{- partial "picture" (dict "page" .Page "src" $featured) }}
+```
+
+Use the shortcode:
+
+```md
+{{</* gallery class="content-gallery" */>}}
+```
+
+this will generate into:
+
+{{< gallery class="content-gallery" >}}
+
 ## Render Hook
 
 ```md
