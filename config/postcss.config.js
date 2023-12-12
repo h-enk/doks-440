@@ -47,6 +47,7 @@ module.exports = {
           './assets/scss/**/*.css',
           './assets/scss/**/*.scss',
           './node_modules/katex/dist/katex.css',
+          './node_modules/dimbox/src/scss/dimbox.scss',
         ]),
       ],
     }),
