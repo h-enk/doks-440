@@ -18,6 +18,12 @@ seo:
   noindex: false # false (default) or true
 ---
 
+<a href="images/CIC_Buchansicht-header.jpg" data-dimbox="my-gallery">
+
+  ![CALL IT CORONA Buchansicht](images/CIC_Buchansicht-header.jpg)
+
+</a>
+
 ## Gallery Shortcode
 
 Just a quick example to help you get started.

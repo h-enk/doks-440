@@ -1,1 +1,9 @@
 // Put your custom SCSS code here
+
+// Set you own values for DimBox variables if needed
+$overlay-color-dark: #333;
+$overlay-color-light: #ccc;
+$overlay-opacity: .9;
+
+// Import DimBox SCSS
+@import 'dimbox/src/scss/dimbox';
